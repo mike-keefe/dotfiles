@@ -1,0 +1,38 @@
+format = """
+$directory$git_branch$git_status$python$nodejs$character"""
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+format = " [$symbol$branch]($style) "
+symbol = ""
+style = "bold purple"
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+conflicted = "⚠️ "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕ "
+modified = "!${count} "
+untracked = "?${count} "
+staged = "+${count} "
+deleted = "✘${count} "
+style = "bold red"
+
+[python]
+format = ' [${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)'
+symbol = " "
+style = "bold yellow"
+detect_extensions = ["py"]
+
+[nodejs]
+format = " [$symbol($version)]($style)"
+symbol = " "
+style = "bold green"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
