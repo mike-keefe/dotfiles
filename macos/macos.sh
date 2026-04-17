@@ -99,11 +99,6 @@ defaults write NSGlobalDomain AppleICUForce24HourTime -bool true
 # Show all processes
 defaults write com.apple.ActivityMonitor ShowCategory -int 0
 
-# ── Safari / WebKit ───────────────────────────────────────────────────────────
-# Enable dev menu and Web Inspector
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-
 # ── Restart affected apps ─────────────────────────────────────────────────────
 echo "Restarting affected apps..."
 for app in "Dock" "Finder" "SystemUIServer"; do
