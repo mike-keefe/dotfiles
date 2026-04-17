@@ -1,6 +1,7 @@
 [user]
 	name = Mike Keefe
 	email = git@mikekeefe.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINv7NORXFORqJWkfS6XjI3WnAVoV8LeRFeNojcR1uqoO
 
 [init]
 	defaultBranch = main
@@ -32,3 +33,9 @@
 	lg = log --oneline --graph --decorate --all
 	recent = branch --sort=-committerdate
 	undo = reset HEAD~1 --mixed
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
