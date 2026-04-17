@@ -41,11 +41,6 @@ defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # ── Dock ──────────────────────────────────────────────────────────────────────
-# Auto-hide the dock
-defaults write com.apple.dock autohide -bool true
-defaults write com.apple.dock autohide-delay -float 0.1
-defaults write com.apple.dock autohide-time-modifier -float 0.3
-
 # Icon size (pixels)
 defaults write com.apple.dock tilesize -int 48
 
