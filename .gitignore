@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Backup files created by install.sh
+*.bak
+
+# Claude Code local settings (machine-specific, not for sharing)
+.claude/

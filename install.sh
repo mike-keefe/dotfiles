@@ -50,5 +50,14 @@ else
 fi
 
 echo ""
+echo "==> Touch ID for sudo"
+if [ ! -f /etc/pam.d/sudo_local ]; then
+  echo "auth       sufficient     pam_tid.so" | sudo tee /etc/pam.d/sudo_local > /dev/null
+  green "  enabled Touch ID for sudo"
+else
+  yellow "  /etc/pam.d/sudo_local already exists, skipping"
+fi
+
+echo ""
 green "Done! Open a new shell to pick up changes."
 echo "Optionally run: bash ~/.dotfiles/macos/macos.sh"
