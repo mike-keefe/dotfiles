@@ -41,6 +41,9 @@ link "$DOTFILES/ssh/config" "$HOME/.ssh/config"
 mkdir -p "$HOME/.config"
 link "$DOTFILES/starship/starship.toml" "$HOME/.config/starship.toml"
 
+# Ghostty
+link "$DOTFILES/ghostty/config" "$HOME/.config/ghostty/config"
+
 echo ""
 echo "==> Installing Homebrew packages"
 if command -v brew &>/dev/null; then
